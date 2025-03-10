@@ -12,7 +12,9 @@ const numbers = [10, 13, 20, 25, 38, 35, 40];
 function greaterThanTwentyFive(numbers: number[]): number[] {
   // write your code here...
 
-  return []; // replace empty array with what you see is fit
+  const filtered = numbers.filter(a => a>=25)
+
+  return filtered; // replace empty array with what you see is fit
 }
 
 // `divisibleByFive` function that:
@@ -22,7 +24,9 @@ function greaterThanTwentyFive(numbers: number[]): number[] {
 // divisibleByFive(numbers); // => [10, 20, 25, 35, 40]
 function divisibleByFive(numbers: number[]): number[] {
   // write your code here...
+  const filtered = numbers.filter(a => a % 5 === 0)
 
+  return filtered;
   return []; // replace empty array with what you see is fit
 }
 
