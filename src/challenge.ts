@@ -9,6 +9,9 @@
 // logger<number | string>([1, 2, 3, "one", "two", "three"]);
 function logger<T>(array: T[]): void {
   // write your code here...
+  array.forEach(x => {
+    console.log(x);
+  });
 }
 
 // `toCelsius` function that:
@@ -19,7 +22,10 @@ function logger<T>(array: T[]): void {
 // toCelsius([32, 68, 100, 212]); // => [0, 20, 37.7778, 100]
 function toCelsius(temperatures: number[]): number[] {
   // write your code here...
-
+  if (temperatures !== undefined){
+    let temperatures1: number[] = temperatures.map((num) => (num - 32) * (5/9));
+    return temperatures1;
+  }
   return []; // replace empty array with what you see is fit
 }
 
@@ -32,7 +38,10 @@ function toCelsius(temperatures: number[]): number[] {
 // hottestDays([80, 90, 100, 110], 95); // => [100, 110]
 function hottestDays(temperatures: number[], threshold: number): number[] {
   // write your code here...
-
+  if (temperatures !== undefined){
+    let temperatures1: number[] = temperatures.filter((num) => num > threshold);
+    return temperatures1;
+  }
   return []; // replace empty array with what you see is fit
 }
 
@@ -42,6 +51,10 @@ function hottestDays(temperatures: number[], threshold: number): number[] {
 // - Log temperatures that exceed the threshold to the console IN DEGREES CELSIUS  (hint: you can combine all previous functions)
 function logHottestDays(temperatures: number[], threshold: number): void {
   // write your code here...
+  if (temperatures !== undefined){
+    const hottestDaysVal = toCelsius(hottestDays(temperatures, threshold));
+    logger(hottestDaysVal);
+  }
 }
 
 export { logger, toCelsius, hottestDays, logHottestDays };
