@@ -10,9 +10,12 @@ const numbers = [10, 13, 20, 25, 38, 35, 40];
 // example:
 // squaredNumbers(numbers); // => [100, 169, 400, 625, 1444, 1225, 1600]
 function squaredNumbers(numbers: number[]): number[] {
-  // write your code here...
+	// write your code here...
+	let squaredNumbers = numbers.map((number) => {
+		return number ** 2;
+	});
 
-  return []; // replace empty array with what you see is fit
+	return squaredNumbers; // replace empty array with what you see is fit
 }
 
 // `doubledNumbers` function that:
@@ -21,9 +24,12 @@ function squaredNumbers(numbers: number[]): number[] {
 // example:
 // doubledNumbers(numbers); // => [20, 26, 40, 50, 76, 70, 80]
 function doubledNumbers(numbers: number[]): number[] {
-  // write your code here...
+	// write your code here...
+	let doubledNumbers = numbers.map((number) => {
+		return number * 2;
+	});
 
-  return []; // replace empty array with what you see is fit
+	return doubledNumbers; // replace empty array with what you see is fit
 }
 
 export { squaredNumbers, doubledNumbers };
